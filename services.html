@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pulse Development | Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #e60012;
+      --black: #121212;
+      --white: #ffffff;
+      --dark-gray: #1e1e1e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+    }
+
+    body {
+      background: var(--dark-gray);
+      color: var(--white);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--black);
+      padding: 20px 50px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--red);
+      margin-bottom: 40px;
+    }
+
+    .services-list {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service {
+      background: var(--black);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px var(--red);
+    }
+
+    .service img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .service h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: var(--red);
+    }
+
+    .service p {
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    a.back-btn {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+      padding: 12px 24px;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    a.back-btn:hover {
+      background: #b5000e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Pulse Development — Services</header>
+
+  <div class="services-list">
+    <div class="service">
+      <img src="https://via.placeholder.com/80?text=💼" alt="Management" />
+      <h3>Management</h3>
+      <p>We handle server moderation, staffing, and community organization.</p>
+    </div>
+    <div class="service">
+      <img src="https://via.placeholder.com/80?text=🎨" alt="Design" />
+      <h3>Design</h3>
+      <p>Professional design services including logos, banners, and more.</p>
+    </div>
+    <div class="service">
+      <img src="https://via.placeholder.com/80?text=🛠️" alt="Development" />
+      <h3>Development</h3>
+      <p>We build websites, Discord bots, and custom applications.</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+</body>
+</html>
