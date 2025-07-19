@@ -1,25 +1,176 @@
-body {
-  font-family: sans-serif;
-  text-align: center;
-  margin-top: 100px;
-  background-color: #121212;
-  color: white;
+/* Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  border: none;
-  background: #00ADB5;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
+
+/* Variables */
+:root {
+  --red: #c00;
+  --black: #111;
+  --white: #fff;
+  --bg-black-opacity: rgba(0, 0, 0, 0.6);
 }
-button:hover {
-  background: #007B83;
+
+/* Top Bar */
+.top-bar {
+  background: var(--black);
+  color: var(--white);
+  padding: 8px 20px;
+  font-size: 14px;
+  display: flex; justify-content: space-between;
 }
-input {
-  padding: 8px;
-  margin: 5px;
+
+/* Header */
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--white);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.logo-img { height: 40px; margin-right: 10px; }
+.logo-text { font-size: 22px; font-weight: 700; color: var(--red); }
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+  position: relative;
+}
+.nav a::after {
+  content: ''; height: 2px; background: var(--red);
+  display: block; width: 0;
+  transition: 0.3s;
+  position: absolute; left: 0; bottom: -4px;
+}
+.nav a:hover::after { width: 100%; }
+.btn {
+  font-weight: 600;
+  padding: 10px 22px;
   border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s;
+}
+.btn-primary { background: var(--red); color: var(--white); }
+.btn-outline {
+  background: transparent;
+  color: var(--red);
+  border: 2px solid var(--red);
+}
+
+/* Pulse animation */
+.pulse-btn {
+  position: relative;
+  overflow: hidden;
+}
+.pulse-btn::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: var(--white);
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  transform: scale(0);
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(0); opacity: 0.4; }
+  70% { transform: scale(2); opacity: 0; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1592861953183-479cbb685194?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white);
+}
+.overlay {
+  position: absolute; inset: 0; background: var(--bg-black-opacity);
+}
+.hero-content {
+  position: relative; text-align: center; max-width: 700px;
+}
+.hero-content h1 {
+  font-size: 48px; margin-bottom: 20px; line-height: 1.2;
+}
+.hero-content p {
+  font-size: 18px; margin-bottom: 30px;
+}
+
+/* Services Section */
+.services {
+  padding: 60px 20px; background: #f9f9f9; text-align: center;
+}
+.services h2 {
+  font-size: 36px; margin-bottom: 40px; color: var(--red);
+}
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.service-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeInUp 0.6s both;
+}
+.service-icon { width: 64px; height: 64px; margin-bottom: 15px; }
+.service-card h3 {
+  font-size: 20px; margin: 10px 0;
+  color: var(--black);
+}
+.service-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Reveal effect */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Showcases */
+.showcase {
+  padding: 60px 20px;
+  text-align: center;
+}
+.showcase h2 { font-size: 32px; margin-bottom: 15px; color: var(--red); }
+.showcase p { color: #333; max-width: 700px; margin: 0 auto 30px; }
+
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background: #fafafa;
+  text-align: center;
+}
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  font-size: 14px;
   border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.contact textarea { min-height: 120px; }
+.contact .btn { width: auto; }
+
+/* Responsive */
+@media(max-width: 768px){
+  .header, .top-bar { flex-direction: column; align-items: center; }
+  .nav { margin: 15px 0; }
 }
