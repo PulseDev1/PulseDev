@@ -2,6 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whitelist Access - Pulse Development</title>
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts -->
+  <script defer src="whitelist.js"></script>
+  <script defer src="verify.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="images/logo.png" alt="PulseDev Logo" class="logo" />
+      <h1>Whitelist Member Access</h1>
+      <p>Enter your Discord username to verify your access.</p>
+
+      <input type="text" id="discordUsername" placeholder="e.g. PulseDev#1234" />
+
+      <button onclick="verifyUser()">Access</button>
+
+      <p id="status" class="status"></p>
+    </div>
+  </div>
+</body>
+</html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pulse Development | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
