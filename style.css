@@ -77,12 +77,31 @@ nav a:hover::after {
 .hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  animation: slideFadeIn 1.2s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-40px);
 }
 
 .hero p {
   font-size: 20px;
   max-width: 600px;
   margin: 0 auto 30px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+/* Animations */
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .btn {
