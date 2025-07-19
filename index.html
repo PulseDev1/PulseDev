@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Button with Discord Link</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <style>
     :root {
       --red: #e60012;
@@ -20,16 +20,11 @@
       font-family: 'Rubik', sans-serif;
     }
 
-    html, body {
-      height: 100%;
-    }
-
     body {
       background: linear-gradient(135deg, #0e0e0e, #2a2a2a);
       color: var(--white);
     }
 
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -40,7 +35,6 @@
 
     .logo img {
       height: 60px;
-      margin-right: 10px;
     }
 
     nav a {
@@ -48,6 +42,7 @@
       text-decoration: none;
       margin: 0 15px;
       position: relative;
+      font-weight: bold;
     }
 
     nav a::after {
@@ -65,14 +60,10 @@
       width: 100%;
     }
 
-    /* Hero Section */
     .hero {
       text-align: center;
       padding: 100px 20px;
-      background-image: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?auto=format&fit=crop&w=1500&q=80');
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       position: relative;
       color: var(--white);
     }
@@ -80,12 +71,8 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      inset: 0;
       background: rgba(0, 0, 0, 0.6);
-      z-index: 0;
     }
 
     .hero-content {
@@ -114,9 +101,8 @@
       color: var(--white);
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: inline-block;
       text-decoration: none;
-      user-select: none;
+      display: inline-block;
     }
 
     .btn:hover {
@@ -124,7 +110,6 @@
       box-shadow: 0 0 12px var(--red);
     }
 
-    /* Services */
     .services {
       padding: 60px 20px;
       background: var(--dark-gray);
@@ -171,7 +156,6 @@
       color: #ccc;
     }
 
-    /* Footer */
     footer {
       background: #111;
       text-align: center;
@@ -184,48 +168,47 @@
 
   <header>
     <div class="logo">
-      <!-- Put your logo here -->
-      <img src="https://via.placeholder.com/150x60?text=Logo" alt="Logo" />
+      <img src="https://via.placeholder.com/150x60?text=Logo" alt="Logo">
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Services</a>
-      <a href="#">About</a>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
       <a href="https://discord.gg/AxhcFukBzx" target="_blank" rel="noopener" class="btn">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Welcome to Our Site</h1>
-      <p>Your awesome tagline goes here.</p>
-      <a href="https://discord.gg/AxhcFukBzx" target="_blank" rel="noopener" class="btn">Contact</a>
+      <h1>Welcome to Our Website</h1>
+      <p>We offer premium services that help you level up your business and community.</p>
+      <a href="services.html" class="btn">Our Services</a>
+      <a href="https://discord.gg/AxhcFukBzx" class="btn" target="_blank">Contact</a>
     </div>
   </section>
 
   <section class="services">
-    <h2>Our Services</h2>
+    <h2>What We Offer</h2>
     <div class="service-grid">
       <div class="service">
-        <img src="https://via.placeholder.com/50" alt="Service 1" />
-        <h3>Service One</h3>
-        <p>Description for service one.</p>
+        <img src="https://via.placeholder.com/50?text=💼" alt="Service 1">
+        <h3>Management</h3>
+        <p>We provide professional community and project management.</p>
       </div>
       <div class="service">
-        <img src="https://via.placeholder.com/50" alt="Service 2" />
-        <h3>Service Two</h3>
-        <p>Description for service two.</p>
+        <img src="https://via.placeholder.com/50?text=🎨" alt="Service 2">
+        <h3>Design</h3>
+        <p>High-quality logos, banners, and branding assets.</p>
       </div>
       <div class="service">
-        <img src="https://via.placeholder.com/50" alt="Service 3" />
-        <h3>Service Three</h3>
-        <p>Description for service three.</p>
+        <img src="https://via.placeholder.com/50?text=🛠️" alt="Service 3">
+        <h3>Development</h3>
+        <p>Custom bots, websites, and scripts tailored to your needs.</p>
       </div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Your Company Name. All rights reserved.
+    &copy; 2025 Your Company. All rights reserved.
   </footer>
 
 </body>
