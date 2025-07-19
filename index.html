@@ -1,11 +1,10 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pulse Development | Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2e0e6fdd6.js" crossorigin="anonymous"></script>
   <style>
     :root {
@@ -43,8 +42,8 @@
       color: var(--white);
       text-decoration: none;
       margin: 0 15px;
-      position: relative;
       font-weight: bold;
+      position: relative;
     }
 
     nav a::after {
@@ -101,9 +100,9 @@
     }
 
     .btn {
-      background: var(--black);
+      background: var(--red);
       color: var(--white);
-      border: 2px solid var(--red);
+      border: none;
       padding: 14px 20px;
       border-radius: 10px;
       font-size: 16px;
@@ -113,6 +112,7 @@
       gap: 10px;
       text-decoration: none;
       transition: all 0.3s ease;
+      box-shadow: 0 0 8px #e60012aa;
     }
 
     .btn i {
@@ -120,7 +120,6 @@
     }
 
     .btn:hover {
-      background: var(--red);
       transform: translateY(-3px);
       box-shadow: 0 0 12px var(--red);
     }
@@ -134,7 +133,7 @@
 
     @media(max-width: 600px) {
       .btn {
-        width: 100%;
+        width: 90%;
         justify-content: center;
       }
     }
@@ -144,10 +143,10 @@
 
   <header>
     <div class="logo">
-      <img src="https://via.placeholder.com/150x60?text=Pulse+Dev" alt="Pulse Development">
+      <img src="https://via.placeholder.com/150x60?text=Pulse+Dev" alt="Pulse Development" />
     </div>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="#">Home</a>
       <a href="https://discord.gg/AxhcFukBzx" target="_blank">Contact</a>
     </nav>
   </header>
@@ -155,15 +154,15 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to Pulse Development</h1>
-      <p>Explore our specialized services for Roblox, Discord, automation bots, tools, and more.</p>
+      <p>Custom services for Roblox, Discord, automation, tools, and secure exchanges.</p>
 
       <div class="service-buttons">
         <a href="roblox.html" class="btn"><i class="fab fa-roblox"></i> Roblox Services</a>
         <a href="discord.html" class="btn"><i class="fab fa-discord"></i> Discord Services</a>
         <a href="bots.html" class="btn"><i class="fas fa-robot"></i> Bot Services</a>
-        <a href="exe-tools.html" class="btn"><i class="fas fa-tools"></i> EXE Tools</a>
+        <a href="exe-tools.html" class="btn"><i class="fas fa-cogs"></i> EXE Tools</a>
         <a href="exchange.html" class="btn"><i class="fas fa-exchange-alt"></i> Exchanges</a>
-        <a href="https://discord.gg/AxhcFukBzx" target="_blank" class="btn"><i class="fas fa-file-contract"></i> Terms of Service</a>
+        <a href="https://discord.gg/AxhcFukBzx" class="btn" target="_blank"><i class="fas fa-file-contract"></i> Terms of Service</a>
       </div>
     </div>
   </section>
