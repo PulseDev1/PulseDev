@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Whitelist Access - Pulse Development</title>
+  <title>PulseDev Whitelist Access</title>
 
-  <!-- Fonts and Styles -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Scripts -->
@@ -17,16 +19,22 @@
   <div class="container">
     <div class="card">
       <img src="images/logo.png" alt="PulseDev Logo" class="logo" />
-      <h1>Whitelist Member Access</h1>
-      <p>Enter your Discord username to verify your access.</p>
+      <h1>Whitelist Access</h1>
+      <p>Enter your Discord username to verify:</p>
 
-      <input type="text" id="discordUsername" placeholder="e.g. PulseDev#1234" />
+      <!-- Private input (like password) -->
+      <input type="password" id="discordUsername" placeholder="Discord Username (e.g. PulseDev#1234)" />
 
-      <button onclick="verifyUser()">Access</button>
+      <button class="btn access-btn" onclick="verifyUser()">Access</button>
 
       <p id="status" class="status"></p>
     </div>
   </div>
+
+  <!-- Circle Contact Button -->
+  <a href="#contact" class="contact-fab" title="Contact Us">
+    ✉️
+  </a>
 </body>
 </html>
 <html lang="en">
