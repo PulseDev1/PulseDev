@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-</html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +6,7 @@
   <title>Pulse Development | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a2e0e6fdd6.js" crossorigin="anonymous"></script>
+
   <style>
     :root {
       --red: #e60012;
@@ -33,6 +33,7 @@
       align-items: center;
       padding: 20px 50px;
       background: var(--black);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
 
     .logo img {
@@ -64,7 +65,7 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px 100px;
       background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437b2?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       position: relative;
     }
@@ -84,12 +85,30 @@
     .hero h1 {
       font-size: 48px;
       margin-bottom: 20px;
+      animation: slideFadeIn 1.2s ease-out forwards;
+      opacity: 0;
+      transform: translateY(-40px);
     }
 
     .hero p {
       font-size: 20px;
       max-width: 600px;
       margin: 0 auto 30px;
+      animation: fadeIn 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     .service-buttons {
@@ -122,7 +141,38 @@
 
     .btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 0 12px var(--red);
+      box-shadow: 0 0 14px var(--red);
+    }
+
+    /* Floating Contact Button */
+    .contact-fab {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background-color: var(--red);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 22px;
+      box-shadow: 0 0 15px #e60012cc;
+      animation: pulse 2s infinite;
+      transition: transform 0.3s;
+      z-index: 999;
+    }
+
+    .contact-fab:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px var(--red); }
+      50% { box-shadow: 0 0 20px var(--red); }
+      100% { box-shadow: 0 0 10px var(--red); }
     }
 
     footer {
@@ -130,6 +180,7 @@
       text-align: center;
       padding: 20px;
       font-size: 14px;
+      margin-top: 100px;
     }
 
     @media(max-width: 600px) {
@@ -137,14 +188,19 @@
         width: 90%;
         justify-content: center;
       }
+
+      .hero h1 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="logo">
-      <img src="https://via.placeholder.com/150x60?text=Pulse+Dev" alt="Pulse Development" />
+      <img src="images/logo.png" alt="Pulse Development" />
     </div>
     <nav>
       <a href="#">Home</a>
@@ -152,10 +208,11 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Welcome to Pulse Development</h1>
-      <p>Custom services for Roblox, Discord, automation, tools, and secure exchanges.</p>
+      <p>Custom services for Roblox, Discord, automation tools, bots, and secure exchanges.</p>
 
       <div class="service-buttons">
         <a href="roblox.html" class="btn"><i class="fab fa-roblox"></i> Roblox Services</a>
@@ -168,6 +225,12 @@
     </div>
   </section>
 
+  <!-- Contact Floating Button -->
+  <a href="https://discord.gg/AxhcFukBzx" target="_blank" class="contact-fab" title="Contact Us">
+    <i class="fas fa-envelope"></i>
+  </a>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Pulse Development. All rights reserved.
   </footer>
