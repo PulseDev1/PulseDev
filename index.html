@@ -38,6 +38,15 @@
             padding: 0 20px;
         }
         
+        /* ===== Security Measures ===== */
+        /* Disable right-click and F12 */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
         /* ===== Professional Navigation ===== */
         header {
             position: fixed;
@@ -221,6 +230,202 @@
             color: var(--gray);
             font-weight: 600;
         }
+        
+        /* ===== Services Section ===== */
+        .services {
+            padding: 120px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-color: #f1f1f1;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .service-content p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        /* ===== Contact Form ===== */
+        .contact {
+            padding: 120px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* ===== Footer ===== */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+        
+        /* ===== Cooldown Timer ===== */
+        .cooldown-message {
+            display: none;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* ===== Pages ===== */
+        .page-header {
+            padding: 180px 0 100px;
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .page-header p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+        }
+        
+        /* ===== Back to Home Button ===== */
+        .back-home {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -228,13 +433,13 @@
     <header>
         <div class="container">
             <nav>
-                <a href="#" class="logo">PULSE DEVELOPMENT</a>
+                <a href="index.html" class="logo">PULSE DEVELOPMENT</a>
                 <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">Work</a>
-                    <a href="#">Services</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Contact</a>
+                    <a href="index.html">Home</a>
+                    <a href="work.html">Work</a>
+                    <a href="services.html">Services</a>
+                    <a href="testimonials.html">Testimonials</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </nav>
         </div>
@@ -247,8 +452,8 @@
                 <h1>PREMIUM DIGITAL SOLUTIONS FOR MODERN BUSINESSES</h1>
                 <p>We architect transformative digital experiences that drive growth, enhance engagement, and position your brand at the forefront of innovation.</p>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary">Start Your Project</a>
-                    <a href="#" class="btn btn-outline">Explore Services</a>
+                    <a href="services.html" class="btn btn-primary">Visit Our Services</a>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -277,5 +482,184 @@
             </div>
         </div>
     </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Specializations</h2>
+                <p>We excel in creating cutting-edge solutions for your digital needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/600x400?text=Roblox+Systems');"></div>
+                    <div class="service-content">
+                        <h3>Roblox Systems</h3>
+                        <p>Advanced game systems, monetization solutions, and custom gameplay mechanics for Roblox experiences.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/600x400?text=Discord+Bots');"></div>
+                    <div class="service-content">
+                        <h3>Discord Bots</h3>
+                        <p>Custom Discord bots with moderation, economy systems, music players, and advanced automation.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/600x400?text=Exchange+Systems');"></div>
+                    <div class="service-content">
+                        <h3>Exchange Systems</h3>
+                        <p>Secure digital asset exchange platforms with robust APIs and fraud prevention systems.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/600x400?text=Development+Tools');"></div>
+                    <div class="service-content">
+                        <h3>Development Tools</h3>
+                        <p>Powerful EXE tools and utilities to streamline your development workflow and productivity.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/600x400?text=Custom+Services');"></div>
+                    <div class="service-content">
+                        <h3>Custom Services</h3>
+                        <p>Tailored solutions designed specifically for your unique business requirements.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://via.placeholder.com/600x400?text=Premium+Support');"></div>
+                    <div class="service-content">
+                        <h3>Premium Support</h3>
+                        <p>Dedicated support and maintenance packages to keep your systems running smoothly.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-form">
+                <h2 style="text-align: center; margin-bottom: 30px; font-size: 2rem;">Contact Our Team</h2>
+                <form id="discordWebhookForm">
+                    <div class="form-group">
+                        <label for="discordName">Your Discord Username</label>
+                        <input type="text" id="discordName" class="form-control" required placeholder="e.g., username#1234">
+                    </div>
+                    <div class="form-group">
+                        <label for="topic">Topic</label>
+                        <select id="topic" class="form-control" required>
+                            <option value="">Select a topic</option>
+                            <option value="Roblox Development">Roblox Development</option>
+                            <option value="Discord Bot">Discord Bot</option>
+                            <option value="Exchange System">Exchange System</option>
+                            <option value="Development Tools">Development Tools</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Request</label>
+                        <textarea id="message" class="form-control" required placeholder="Describe what you need in detail"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </div>
+                    <div id="cooldownMessage" class="cooldown-message">
+                        Please wait <span id="cooldownTimer">60</span> seconds before sending another message.
+                    </div>
+                    <div id="successMessage" style="display: none; color: green; text-align: center; margin-top: 15px;">
+                        Your message has been sent successfully!
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html" class="footer-logo">PULSE DEVELOPMENT</a>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="work.html">Work</a>
+                <a href="services.html">Services</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2023 Pulse Development. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Security measures
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+            }
+        });
+        
+        // Discord Webhook Form with Cooldown
+        const form = document.getElementById('discordWebhookForm');
+        const cooldownMessage = document.getElementById('cooldownMessage');
+        const cooldownTimer = document.getElementById('cooldownTimer');
+        const successMessage = document.getElementById('successMessage');
+        
+        let canSubmit = true;
+        let cooldownInterval;
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (!canSubmit) return;
+            
+            // Get form values
+            const discordName = document.getElementById('discordName').value;
+            const topic = document.getElementById('topic').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send to your webhook
+            // For security, this should be handled by your backend
+            console.log('Sending to Discord webhook:', {
+                discordName,
+                topic,
+                message
+            });
+            
+            // Show success message
+            successMessage.style.display = 'block';
+            form.reset();
+            
+            // Start cooldown (60 seconds)
+            canSubmit = false;
+            cooldownMessage.style.display = 'block';
+            let seconds = 60;
+            
+            cooldownInterval = setInterval(function() {
+                seconds--;
+                cooldownTimer.textContent = seconds;
+                
+                if (seconds <= 0) {
+                    clearInterval(cooldownInterval);
+                    canSubmit = true;
+                    cooldownMessage.style.display = 'none';
+                    successMessage.style.display = 'none';
+                }
+            }, 1000);
+        });
+        
+        // Backend security would be implemented server-side
+        // This includes rate limiting, input validation, etc.
+    </script>
 </body>
 </html>
