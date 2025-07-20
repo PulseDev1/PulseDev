@@ -30,7 +30,7 @@
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #ff3333; /* Red navigation text */
+            color: white;
             font-weight: 500;
             font-size: 14px;
             letter-spacing: 0.5px;
@@ -49,11 +49,14 @@
         }
         
         .hero h1 {
-            font-size: 48px; /* DESIGNX title size */
+            font-size: 48px; /* Exact DESIGNX title size */
             margin-bottom: 20px;
             font-weight: 700;
             letter-spacing: 1px;
-            color: #ff3333; /* Red title */
+            background: linear-gradient(to right, #ff0000, #ff6666); /* Red gradient */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
         
         .hero p {
@@ -78,7 +81,7 @@
         
         .stat-item h2 {
             font-size: 36px; /* DESIGNX stat size */
-            color: #ff3333; /* Red numbers */
+            color: #ff0000; /* Red numbers */
             margin-bottom: 5px;
         }
         
@@ -92,7 +95,7 @@
         /* CTA Button */
         .cta-button {
             display: inline-block;
-            background-color: #ff3333; /* Red button */
+            background: linear-gradient(to right, #ff0000, #ff6666); /* Red gradient button */
             color: white;
             padding: 15px 30px;
             border-radius: 25px;
@@ -101,13 +104,13 @@
             font-size: 16px;
             margin-top: 10px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            border: none;
         }
         
         .cta-button:hover {
-            background-color: #e60000; /* Darker red on hover */
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
         }
     </style>
 </head>
