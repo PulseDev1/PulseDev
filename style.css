@@ -1,10 +1,21 @@
-/* === DESIGNX STYLES === */
+/* === PULSE DEVELOPMENT STYLES === */
 
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #fff, #f2f2f2);
+  background: linear-gradient(to bottom right, #000, #1a1a1a);
+  color: white;
+  animation: bgFade 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgFade {
+  0% {
+    background: linear-gradient(to bottom right, #000, #1a1a1a);
+  }
+  100% {
+    background: linear-gradient(to bottom right, #330000, #660000);
+  }
 }
 
 nav {
@@ -12,6 +23,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
+  animation: slideDown 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 nav ul {
@@ -22,41 +46,113 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff0000;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 nav .contact-btn {
-  background-color: #3b82f6;
+  background-color: #ff0000;
   color: white;
   padding: 10px 18px;
   border-radius: 8px;
-  transition: 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px #ff0000, 0 0 20px #ff4d4d;
+  animation: glowing 2.5s ease-in-out infinite alternate;
+  border: none;
+  font-weight: 700;
+  transition: box-shadow 0.3s ease;
 }
 
 nav .contact-btn:hover {
-  background-color: #2563eb;
+  box-shadow: 0 0 12px #ff0000, 0 0 28px #ff1a1a;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 15px #ff4d4d, 0 0 30px #ff4d4d;
+  }
 }
 
 .hero {
   text-align: center;
   padding: 100px 20px;
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
 
 .hero h1 {
   font-size: 12vw;
-  background: linear-gradient(to right, #999, #000, #ccc);
+  background: linear-gradient(to right, #ff0000, #800000, #ff4d4d);
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
   margin: 0;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #555;
+  color: #ccc;
   max-width: 600px;
   margin: 20px auto 40px;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
 }
 
 .stats {
@@ -64,7 +160,10 @@ nav .contact-btn:hover {
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
-  color: #444;
+  color: #eee;
+  animation: fadeInUp 2s ease forwards;
+  opacity: 0;
+  margin-bottom: 50px;
 }
 
 .stat {
@@ -74,20 +173,34 @@ nav .contact-btn:hover {
 .stat h3 {
   font-size: 2rem;
   margin: 0;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+  }
+  50% {
+    color: #ff6666;
+    text-shadow: 0 0 20px #ff6666;
+  }
 }
 
 .cta-button {
-  background-color: #3b82f6;
+  background-color: #ff0000;
   color: white;
   padding: 12px 24px;
   border: none;
   border-radius: 50px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background 0.3s;
+  box-shadow: 0 0 10px #ff0000, 0 0 25px #ff4d4d;
+  transition: background 0.3s, box-shadow 0.3s;
+  animation: glowing 2.5s ease-in-out infinite alternate;
 }
 
 .cta-button:hover {
-  background-color: #2563eb;
+  background-color: #cc0000;
+  box-shadow: 0 0 15px #ff0000, 0 0 35px #ff1a1a;
 }
