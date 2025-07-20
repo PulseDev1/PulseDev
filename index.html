@@ -14,8 +14,8 @@
         }
         
         body {
-            background-color: #f8f9fa;
-            color: white;
+            background-color: white;
+            color: #333;
             line-height: 1.6;
         }
         
@@ -23,29 +23,30 @@
         nav {
             display: flex;
             justify-content: center;
-            padding: 20px 0;
-            background-color: transparent;
+            padding: 25px 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
         
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: white;
-            font-weight: 500;
+            color: #333;
+            font-weight: 600;
             font-size: 14px;
-            letter-spacing: 0.5px;
-            transition: opacity 0.3s;
+            letter-spacing: 1px;
+            transition: color 0.3s;
         }
         
         nav a:hover {
-            opacity: 0.8;
+            color: #ff0000;
         }
         
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 80px 20px 100px;
-            background: linear-gradient(135deg, #0066ff, #00ccff);
+            padding: 100px 20px;
+            background-color: white;
         }
         
         .hero h1 {
@@ -53,7 +54,7 @@
             margin-bottom: 20px;
             font-weight: 700;
             letter-spacing: 1px;
-            background: linear-gradient(to right, #ff0000, #ff6666); /* Red gradient */
+            background: linear-gradient(to right, #ff0000, #ff4500); /* Red-orange gradient */
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -63,26 +64,29 @@
             font-size: 20px; /* DESIGNX text size */
             max-width: 600px;
             margin: 0 auto 40px;
-            opacity: 0.9;
+            color: #666;
         }
         
         /* Stats Section */
         .stats {
             display: flex;
             justify-content: center;
-            background-color: white;
-            padding: 50px 20px;
+            background-color: #f9f9f9;
+            padding: 60px 20px;
             text-align: center;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
         }
         
         .stat-item {
-            margin: 0 25px;
+            margin: 0 30px;
         }
         
         .stat-item h2 {
             font-size: 36px; /* DESIGNX stat size */
             color: #ff0000; /* Red numbers */
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 700;
         }
         
         .stat-item p {
@@ -90,27 +94,28 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #666;
+            font-weight: 500;
         }
         
         /* CTA Button */
         .cta-button {
             display: inline-block;
-            background: linear-gradient(to right, #ff0000, #ff6666); /* Red gradient button */
+            background: linear-gradient(to right, #ff0000, #ff4500); /* Red-orange gradient */
             color: white;
             padding: 15px 30px;
-            border-radius: 25px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             font-size: 16px;
             margin-top: 10px;
             transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
             border: none;
         }
         
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
         }
     </style>
 </head>
